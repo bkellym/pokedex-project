@@ -1,0 +1,64 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding: 16px;
+}
+
+.nomeNumero{
+    color: white;
+    text-align: center;
+    width: 50%;
+}
+
+.nome{
+    margin: 0px
+}
+
+.numero{
+    font-weight: 700;
+}
+
+div.imagem{
+    background-color: rgba(255, 255, 255, 0.25 );
+    width: 30vw;
+    border-radius: 100%;
+    height: 30vw;
+    margin: 8px auto;
+    padding-top: 128px;
+}
+
+img.imagem{
+    width: 80%;
+    margin: auto;
+    display: block
+}
+
+.detalhePokemon{
+    display: flex;
+}
+
+.painel{
+    width: 66%;
+    margin: 0 auto;
+    padding: 32px;
+    border-radius: 32px;
+}
+
+.detalhe-titulo{
+    color: white;
+    font-weight: 900;
+    text-align: center;
+    font-size: 1.8em;
+    padding-top: 0px;
+}
+
+.detalhe-valor{
+    width: 90%;
+    padding: 8px 16px;
+    border-radius: 32px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8 );
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+        <!-- Normalize CSS -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+            integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Font Roboto -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+        <!-- CSS Materialize -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+        <!-- CSS Projeto -->
+        <link rel="stylesheet" href="/assets/css/pokemon.css" />
+        <link rel="stylesheet" href="/assets/css/pokedex.css" />
+
+        <title> Pokedex </title>
+    </head>
+
+    <body>
+        <header>
+            <button class="btn-grade" onclick="returnHome()"> <span class="material-symbols-outlined"> apps </span> </button>
+        </header>
+        
+        <section id="pokemon" class="detalhePokemon">
+            <div style="width: 50%;">
+                <div class="painel">
+                    <h3 class="detalhe-titulo"> ORIGEM </h3>
+                    <div class="detalhe-valor">
+                        KANTO
+                    </div>
+                    <h3 class="detalhe-titulo"> STATS </h3>
+                    <div class="detalhe-valor">
+                        <table>
+                            <tr>
+                                <th> Velocidade </th>
+                                <th> 130 </th>
+                            </tr>
+                            <tr>
+                                <th> Defesa Especial </th>
+                                <th> 130 </th>
+                            </tr>
+                            <tr>
+                                <th> Ataque Especial </th>
+                                <th> 130 </th>
+                            </tr>
+                            <tr>
+                                <th> Defesa </th>
+                                <th> 130 </th>
+                            </tr>
+                            <tr>
+                                <th> Ataque </th>
+                                <th> 130 </th>
+                            </tr>
+                            <tr>
+                                <th> Vida </th>
+                                <th> 130 </th>
+                            </tr>
+                        </table>
+                    </div>
+                    <h3 class="detalhe-titulo"> HABILIDADES </h3>
+                    <div class="detalhe-valor">
+                        <table>
+                            <tr>
+                                <th style="text-align: center;">
+                                    blaze
+                                </th>
+                            </tr>
+                            <tr>
+                                <th style="text-align: center;">
+                                    solar-power
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                    <h3 class="detalhe-titulo"> EGG GROUP </h3>
+                    <div class="detalhe-valor">
+                        <table>
+                            <tr >
+                                <th style="text-align: center;">
+                                    Monster
+                                </th>
+                                <th style="text-align: center;">
+                                    Dragon
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nomeNumero">
+                <span id="numeroPokemon" class="numero">#0001</span>
+                <h1 id="nomePokemon" class="nome"> </h1>
+
+                <div id="imagemPokemon" class="imagem"> </div>
+            </div>
+        </section>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!-- Nosso JS -->
+        <script src="/assets/js/pokemon-model.js"></script>
+        <script src="/assets/js/poke-converter.js"></script>
+        <script src="/assets/js/poke-api.js"></script>
+        <script src="/assets/js/pokemon-controller.js"></script>
+
+    </body>
+</html>
