@@ -107,3 +107,7 @@ header {
     padding-left: 16px;
     color: rgb(85, 85, 85);
 }
+
+#habilidadesPokemon th{
+    text-align: center;
+}

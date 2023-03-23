@@ -16,20 +16,20 @@ pokeUtils.pokemonFromJson = (pokeDetail) => {
     return pokemon
 }
 
-pokeUtils.statsFromJson = (statsJson) => {
-    const stats = {};
+pokeUtils.pokemonDetailFromJson = (pokeDetail) => {
+    const pokemon = new Pokemon()
+    pokemon.number = pokeDetail.id
+    pokemon.name = pokeDetail.name
 
-    return stats;
-}
+    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
+    const abilities = pokeDetail.abilities.map((slot) => slot.ability.name);
+    const [type] = types
 
-pokeUtils.abilitiesFromJson = (abilitiesJson) => {
-    const abilities = {};
+    pokemon.abilities = abilities;
+    pokemon.types = types
+    pokemon.type = type
 
-    return abilities ;
-}
-
-pokeUtils.eggGroupFromJson = (eggGroupJson) => {
-    const eggGroup = {};
-
-    return eggGroup ;
+    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+    
+    return pokemon
 }

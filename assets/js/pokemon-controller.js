@@ -1,8 +1,8 @@
-const resumoPokemon = document.getElementById('resumoPokemon');
-const nomePokemon = document.getElementById('nomePokemon');
-const numeroPokemon = document.getElementById('numeroPokemon');
-const imagemPokemon = document.getElementById('imagemPokemon');
-const tipoPokemon = document.getElementById('tipoPokemon');
+const nome = document.getElementById('nomePokemon');
+const numero = document.getElementById('numeroPokemon');
+const imagem = document.getElementById('imagemPokemon');
+const tipo = document.getElementById('tipoPokemon');
+const habilidades = document.getElementById('habilidadesPokemon');
 
 const urlParams = new URLSearchParams(window.location.search);
 returnHome = () => window.location.href='/';
@@ -11,11 +11,13 @@ function inicializaComponentes() {
     let pokeID = urlParams.get('pokeid');
     
     pokeApi.getPokemonDetailById(pokeID).then(function(pokeDetail) {
-        nomePokemon.innerHTML = pokeDetail.name;
-        numeroPokemon.innerHTML = `#${pokeDetail.number}`;
-        imagemPokemon.innerHTML = `<img src="${pokeDetail.photo}" alt="${pokeDetail.name}" class="imagem">`
+        nome.innerHTML = pokeDetail.name;
+        numero.innerHTML = `#${pokeDetail.number}`;
+        imagem.innerHTML = `<img src="${pokeDetail.photo}" alt="${pokeDetail.name}" class="imagem">`
 
-        tipoPokemon.innerHTML += `${pokeDetail.types.map((type) => `<div class="tag ${type}">${type}</div>`).join('')}`
+        tipo.innerHTML += `${pokeDetail.types.map((type) => `<div class="tag ${type}">${type}</div>`).join('')}`
+
+        habilidades.innerHTML = pokeDetail.abilities.map((ability) => `<tr> <th> ${ability} </th> </tr>`);
 
         numeroPokemon.classList += ` ${pokeDetail.type} numero tag `;
         document.body.classList = pokeDetail.type;

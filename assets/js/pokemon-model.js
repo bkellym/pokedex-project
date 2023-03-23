@@ -4,11 +4,8 @@ class Pokemon {
     type;
     types = [];
     photo;
-    origem;
-}
-
-class PokemonDetail {
-    stats = { speed, atksp, defsp, atk, def, hp };
-    habilidades = [];
+    origem;    
+    abilities = [];
     egg_group = [];
+    stats = {};
 }

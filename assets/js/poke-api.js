@@ -6,7 +6,7 @@ pokeApi.getPokemonDetailById = (pokeid) => {
 
     return fetch(url)
         .then((response) => response.json())
-        .then(pokeUtils.pokemonFromJson);
+        .then(pokeUtils.pokemonDetailFromJson);
 }
 
 pokeApi.getPokemonDetail = (pokemon) => {
