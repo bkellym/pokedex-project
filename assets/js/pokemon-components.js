@@ -16,3 +16,27 @@ htmlComponents.getPokemonCard = (pokemon) => {
                 </div>
             </li>`;
 }
+
+htmlComponents.getPokemonStatsTable = (stats) => {
+    
+    return `<table class="stats">
+                <tr>
+                    <th class="nome"> Velocidade </th>
+                    <th class="valor"> ${stats.speed} </th>
+                    <th class="nome"> Vida </th>
+                    <th class="valor"> ${stats.hp} </th>
+                </tr>
+                <tr>
+                    <th class="nome"> Defesa Especial </th>
+                    <th class="valor">  ${stats.special_defense} </th>
+                    <th class="nome"> Defesa </th>
+                    <th class="valor">  ${stats.defense} </th>
+                </tr>
+                <tr>
+                    <th class="nome"> Ataque Especial </th>
+                    <th class="valor">  ${stats.special_attack} </th>
+                    <th class="nome"> Ataque </th>
+                    <th class="valor">  ${stats.attack} </th>
+                </tr>
+            </table>`
+}

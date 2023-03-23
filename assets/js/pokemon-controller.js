@@ -3,6 +3,7 @@ const numero = document.getElementById('numeroPokemon');
 const imagem = document.getElementById('imagemPokemon');
 const tipo = document.getElementById('tipoPokemon');
 const habilidades = document.getElementById('habilidadesPokemon');
+const stats = document.getElementById('statsPokemon');
 
 const urlParams = new URLSearchParams(window.location.search);
 returnHome = () => window.location.href='/';
@@ -18,6 +19,8 @@ function inicializaComponentes() {
         tipo.innerHTML += `${pokeDetail.types.map((type) => `<div class="tag ${type}">${type}</div>`).join('')}`
 
         habilidades.innerHTML = pokeDetail.abilities.map((ability) => `<tr> <th> ${ability} </th> </tr>`);
+
+        stats.innerHTML =  htmlComponents.getPokemonStatsTable(pokeDetail.stats);
 
         numeroPokemon.classList += ` ${pokeDetail.type} numero tag `;
         document.body.classList = pokeDetail.type;
