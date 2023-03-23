@@ -2,6 +2,7 @@ const resumoPokemon = document.getElementById('resumoPokemon');
 const nomePokemon = document.getElementById('nomePokemon');
 const numeroPokemon = document.getElementById('numeroPokemon');
 const imagemPokemon = document.getElementById('imagemPokemon');
+const tipoPokemon = document.getElementById('tipoPokemon');
 
 const urlParams = new URLSearchParams(window.location.search);
 returnHome = () => window.location.href='/';
@@ -13,6 +14,10 @@ function inicializaComponentes() {
         nomePokemon.innerHTML = pokeDetail.name;
         numeroPokemon.innerHTML = `#${pokeDetail.number}`;
         imagemPokemon.innerHTML = `<img src="${pokeDetail.photo}" alt="${pokeDetail.name}" class="imagem">`
+
+        tipoPokemon.innerHTML += `${pokeDetail.types.map((type) => `<div class="tag ${type}">${type}</div>`).join('')}`
+
+        numeroPokemon.classList += ` ${pokeDetail.type} numero tag `;
         document.body.classList = pokeDetail.type;
     })
 }

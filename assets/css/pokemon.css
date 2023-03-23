@@ -2,25 +2,56 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.btn-grade{
+    width: 64px;
+    height: 64px;
+    background-color: transparent;
+    border: none;
+}
+
+.btn-grade:hover{
+    cursor: pointer;
+}
+
 header {
     padding: 16px;
 }
 
-.nomeNumero{
+.tag {
+    border-radius: 8px;
+    margin: 0px 16px;
+    padding: 4px 32px;
+}
+
+.detalhePokemon{
+    display: flex;
+}
+
+.exibicao{
     color: white;
     text-align: center;
     width: 50%;
 }
 
-.nome{
+.exibicao .nome{
     margin: 0px
 }
 
-.numero{
+.exibicao .numero{
     font-weight: 700;
+    filter: brightness(1.1);
+    margin: 0 auto;
+    max-width: 128px;
 }
 
-div.imagem{
+.exibicao .tipos{
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+    filter: brightness(0.9);
+}
+
+.exibicao div.imagem{
     background-color: rgba(255, 255, 255, 0.25 );
     width: 30vw;
     border-radius: 100%;
@@ -29,36 +60,50 @@ div.imagem{
     padding-top: 128px;
 }
 
-img.imagem{
-    width: 80%;
+.exibicao img.imagem{
+    height: 25vw;
     margin: auto;
     display: block
 }
 
-.detalhePokemon{
-    display: flex;
-}
-
-.painel{
-    width: 66%;
-    margin: 0 auto;
-    padding: 32px;
+.detalhes{
+    width: 80%;
+    padding: 0px 32px;
     border-radius: 32px;
 }
 
-.detalhe-titulo{
+.detalhes .titulo{
     color: white;
     font-weight: 900;
     text-align: center;
     font-size: 1.8em;
     padding-top: 0px;
+    margin-top: 0px;
 }
 
-.detalhe-valor{
+.detalhes .painel{
     width: 90%;
     padding: 8px 16px;
     border-radius: 32px;
     margin: 0 auto;
+    margin-bottom: 32px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8 );
+}
+
+.detalhes .stats tr {
+    display: flex;
+    border: 0px;
+}
+
+.detalhes .stats .nome {
+    width: 32%;
+    text-align: right;
+    padding-right: 16px;
+}
+
+.detalhes .stats .valor {
+    width: 18%;
+    padding-left: 16px;
+    color: rgb(85, 85, 85);
 }
