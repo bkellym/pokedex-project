@@ -1,6 +1,14 @@
 
 const pokeApi = {}
 
+pokeApi.getEggGroup = (pokeid) => {
+    const url = `https://pokeapi.co/api/v2/pokemon-species/${pokeid}/`
+
+    return fetch(url)
+        .then((response) => response.json())
+        .then(pokeUtils.getEggGroup);
+}
+
 pokeApi.getPokemonDetailById = (pokeid) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${pokeid}/`
 

@@ -17,22 +17,27 @@ pokeUtils.pokemonFromJson = (pokeDetail) => {
 }
 
 pokeUtils.pokemonDetailFromJson = (pokeDetail) => {
-    const pokemon = new Pokemon()
-    pokemon.number = pokeDetail.id
-    pokemon.name = pokeDetail.name
 
-    const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
-    const abilities = pokeDetail.abilities.map((slot) => slot.ability.name);
-    const [type] = types
+    return pokeApi.getEggGroup(pokeDetail.id).then((egg_group) => {
+        const pokemon = new Pokemon()
 
-    pokemon.abilities = abilities;
-    pokemon.types = types
-    pokemon.type = type
+        pokemon.number = pokeDetail.id
+        pokemon.name = pokeDetail.name
 
-    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
-    pokemon.stats = pokeUtils.getStatsFromJson(pokeDetail.stats);
-    
-    return pokemon
+        const types = pokeDetail.types.map((typeSlot) => typeSlot.type.name);
+        const abilities = pokeDetail.abilities.map((slot) => slot.ability.name);
+        const [type] = types
+
+        pokemon.abilities = abilities;
+        pokemon.types = types
+        pokemon.type = type
+
+        pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+        pokemon.stats = pokeUtils.getStatsFromJson(pokeDetail.stats);
+        pokemon.egg_group = egg_group;
+
+        return pokemon;
+    });    
 }
 
 pokeUtils.getStatsFromJson = (statsJson) => {
@@ -48,4 +53,8 @@ pokeUtils.getStatsFromJson = (statsJson) => {
     stats.speed = statsArray[5];
 
     return stats;
+}
+
+pokeUtils.getEggGroup = (json) => {
+    return json.egg_groups.map((slot) => slot.name);
 }

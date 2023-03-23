@@ -4,6 +4,7 @@ const imagem = document.getElementById('imagemPokemon');
 const tipo = document.getElementById('tipoPokemon');
 const habilidades = document.getElementById('habilidadesPokemon');
 const stats = document.getElementById('statsPokemon');
+const egg_group = document.getElementById('groupPokemon');
 
 const urlParams = new URLSearchParams(window.location.search);
 returnHome = () => window.location.href='/';
@@ -17,9 +18,8 @@ function inicializaComponentes() {
         imagem.innerHTML = `<img src="${pokeDetail.photo}" alt="${pokeDetail.name}" class="imagem">`
 
         tipo.innerHTML += `${pokeDetail.types.map((type) => `<div class="tag ${type}">${type}</div>`).join('')}`
-
         habilidades.innerHTML = pokeDetail.abilities.map((ability) => `<tr> <th> ${ability} </th> </tr>`);
-
+        egg_group.innerHTML = pokeDetail.egg_group.map((group) => `<th style="text-align: center;"> ${group} </th>`);
         stats.innerHTML =  htmlComponents.getPokemonStatsTable(pokeDetail.stats);
 
         numeroPokemon.classList += ` ${pokeDetail.type} numero tag `;
