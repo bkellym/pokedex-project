@@ -39,7 +39,6 @@ header {
 
 .exibicao .numero{
     font-weight: 700;
-    filter: brightness(1.1);
     margin: 0 auto;
     max-width: 128px;
 }
@@ -48,7 +47,7 @@ header {
     display: flex;
     justify-content: center;
     margin-top: 8px;
-    filter: brightness(0.9);
+    text-transform: uppercase;
 }
 
 .exibicao div.imagem{

@@ -17,12 +17,12 @@ function inicializaComponentes() {
         numero.innerHTML = `#${pokeDetail.number}`;
         imagem.innerHTML = `<img src="${pokeDetail.photo}" alt="${pokeDetail.name}" class="imagem">`
 
-        tipo.innerHTML += `${pokeDetail.types.map((type) => `<div class="tag ${type}">${type}</div>`).join('')}`
+        tipo.innerHTML += `${pokeDetail.types.map((type) => `<div class="tag ${type} darken">${type}</div>`).join('')}`
         habilidades.innerHTML = pokeDetail.abilities.map((ability) => `<tr> <th> ${ability} </th> </tr>`);
         egg_group.innerHTML = pokeDetail.egg_group.map((group) => `<th style="text-align: center;"> ${group} </th>`);
         stats.innerHTML =  htmlComponents.getPokemonStatsTable(pokeDetail.stats);
 
-        numeroPokemon.classList += ` ${pokeDetail.type} numero tag `;
+        numeroPokemon.classList += ` ${pokeDetail.type} lighten numero tag `;
         document.body.classList = pokeDetail.type;
     })
 }
