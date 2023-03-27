@@ -23,6 +23,7 @@ function inicializaComponentes() {
         stats.innerHTML =  htmlComponents.getPokemonStatsTable(pokeDetail.stats);
 
         numeroPokemon.classList += ` ${pokeDetail.type} lighten numero tag `;
+        imagem.classList += ` ${pokeDetail.type} lighten`;
         document.body.classList = pokeDetail.type;
     })
 }
