@@ -1,7 +1,10 @@
 div{
-  background-color: paleturquoise;
   padding: 16px;
   border-radius: 0px 16px 0px 16px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 span {

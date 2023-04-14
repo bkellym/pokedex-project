@@ -1,0 +1,7 @@
+div {
+  min-height: 330px;
+  width: 15vw;
+  position: relative;
+  margin: 0px 16px;
+  border-radius: 0px 8px 0px 16px;
+}
