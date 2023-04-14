@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'poke-card-title',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./poke-card-title.component.css']
 })
 export class PokeCardTitleComponent {
-
+  @Input() name: string = "";
+  @Input() num: string = "0";
 }
