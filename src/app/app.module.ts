@@ -7,6 +7,7 @@ import { PokeCardTitleComponent } from './poke-card/poke-card-title/poke-card-ti
 import { PokeCardTagComponent } from './poke-card/poke-card-tag/poke-card-tag.component';
 import { PokeCardComponent } from './poke-card/poke-card.component';
 import { PokeContainerComponent } from './poke-container/poke-container.component';
+import { PokeTagComponent } from './poke-tag/poke-tag.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { PokeContainerComponent } from './poke-container/poke-container.componen
     PokeCardTitleComponent,
     PokeCardTagComponent,
     PokeCardComponent,
-    PokeContainerComponent
+    PokeContainerComponent,
+    PokeTagComponent
   ],
   imports: [
     BrowserModule,

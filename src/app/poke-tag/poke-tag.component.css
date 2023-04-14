@@ -1,0 +1,9 @@
+div {
+  width: 96px;
+  text-align: center;
+  padding: 8px 16px;
+  letter-spacing: 2px;
+  font-weight: 300;
+  border-radius: 32px;
+  position: relative;
+}
